@@ -10,6 +10,12 @@ export default async function(req, res) {
     return pre;
   }, {})
 
+  const siteArr = Object.keys(siteObj).map(tag => {
+    return {
+      tag,
+      sites: siteObj[tag]
+    }
+  })
 
-  res.status(200).json(siteObj);
+  res.status(200).json(siteArr);
 }
