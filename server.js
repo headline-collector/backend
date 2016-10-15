@@ -3,6 +3,7 @@ import bodyParser  from 'body-parser';
 import methodOverride from 'method-override';
 import morgan      from 'morgan';
 import mongoose    from 'mongoose';
+import cors from 'cors';
 import { DATABASE } from './config'; // get our config file
 import verifyToken from './middlewares/verifyToken'
 import user from './routes/user';
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(morgan('dev'));
+app.use(cors());
 
 app.post('/signup', user.signup);
 app.post('/login', user.login);
@@ -31,7 +33,7 @@ app.post('/watchlist', verifyToken, watchlist);
 
 app.use('/needingToken', needingToken);
 
-const port = 3000; // used to create,sign, and verify tokens
+const port = 3000; // used to create, sign, and verify tokens
 app.listen(port);
 console.log('API magic happens at http://localhost:' + port);
 

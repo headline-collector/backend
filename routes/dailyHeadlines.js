@@ -11,7 +11,9 @@ export default async function(req, res) {
     const site = user.watches[i]
     console.log(site)
     const siteHeadlines = await DailyHeadline.find({site, date})
-    headlineArr.push(siteHeadlines[0])
+    if (siteHeadlines[0]) {
+      headlineArr.push(siteHeadlines[0])
+    }
   }
 
   res.status(200).json({

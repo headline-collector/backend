@@ -1,4 +1,4 @@
-import  User    from '../models/User';
+import  User from '../models/User';
 import { siteList } from '../config';
 
 export default async function(req, res) {
@@ -14,8 +14,8 @@ export default async function(req, res) {
     const user = await User.findOne();
       console.log(user)
 
-    // TODO: check if site has been watched
-    if(false) {
+    // check if site has been watched
+    if(user.watches.indexOf(site) !== -1) {
       res.status(400).json({success:false, message:'site has been watched by user', watches: user.watches})
     } else {
       user.watches.push(site);
