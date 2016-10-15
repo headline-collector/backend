@@ -2,12 +2,11 @@
 
 ### Main tools used:
 
-[`JWT`](https://github.com/auth0/node-jsonwebtoken), [`express`](strongloop/express), [`mongoose`](https://github.com/Automattic/mongoose), [`axios`](https://github.com/mzabriskie/axios), [`nodemailer`](https://github.com/andris9/Nodemailer)
-
+[`JWT`](https://github.com/auth0/node-jsonwebtoken), [`express`](strongloop/express), [`mongoose`](https://github.com/Automattic/mongoose)
 ### How to start:
 
 0. install `mongodb`
 0. `npm install -g nodemon babel@5.8.29`
-1. start mongodb: `mongod --dbpath YourDBPath`;
+1. start mongodb: `mongod --dbpath YourDBPath`
 3. run the server: `npm start`
 
