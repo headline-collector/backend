@@ -1,4 +1,4 @@
-## REST api server starter (using JWT, express and mongoose)
+## Api server for headline-collector
 
 ### Main tools used:
 
@@ -9,4 +9,3 @@
 0. `npm install -g nodemon babel@5.8.29`
 1. start mongodb: `mongod --dbpath YourDBPath`
 3. run the server: `npm start`
-
