@@ -1,4 +1,4 @@
-import { genSalt, hash, compare } from 'bcrypt';
+import { genSalt, hash, compare } from 'bcryptjs';
 import promisify from 'es6-promisify';
 
 const genSaltAsync = promisify(genSalt);
