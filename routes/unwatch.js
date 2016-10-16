@@ -11,7 +11,7 @@ export default async function(req, res) {
   if (!existObj) {
     res.status(400).json({success:false, message:'site not yet crawlered'});
   } else {
-    const user = await User.findOne();
+    const user = await User.findOne({name: req.decoded.name});
     user.watches = user.watches.filter(watchedSite => {
       return watchedSite !== site
     })
