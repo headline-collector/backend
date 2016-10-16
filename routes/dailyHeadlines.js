@@ -15,9 +15,10 @@ export default async function(req, res) {
       headlineArr.push(siteHeadlines[0])
     }
   }
-
+console.log(user)
   res.status(200).json({
     message: 'success',
     headlines: headlineArr
   });
+  
 }

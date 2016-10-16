@@ -16,6 +16,8 @@ export default async function(req, res) {
       return watchedSite !== site
     })
     user.save();
-    res.status(200).json({success: true, watches: user.watches})
+    console.log(user)
+    res.status(200).json({success: true, watches: user.watches});
+    
   }
 }

@@ -20,7 +20,9 @@ export default async function(req, res) {
     } else {
       user.watches.push(site);
       user.save();
+      
       res.status(200).json({success:true, watches: user.watches});
     }
   }
+  
 }
